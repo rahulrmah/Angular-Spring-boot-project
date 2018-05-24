@@ -1,0 +1,130 @@
+
+
+
+<div   id="mlistID" class="col-md-4 login-sec" style="border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 6px;
+    margin-left: 154px;
+    margin-top: -1px;
+    width: 433px;
+   ">
+  
+    <h2 class="text-center">Assign Mentor/Evaluator</h2>
+
+<form class="login-form" (ngSubmit)="assignMentorEvaluator()" >
+  <div class="form-group">
+			<label for="technology">TECHNOLOGY 
+          <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+      </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="mentee.technology" 
+		name="technology" (change)="onSelectTech($event.target.value)" required>  
+             <option value="">Please select a Technology</option>         
+             <option [ngValue]="tech2" *ngFor="let tech2 of tech">  
+                            {{tech2}}  
+                     </option>  
+                </select> 
+
+    </div>
+   
+
+
+		 <div class="form-group">
+			<label for="technology">Group Name
+          <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+      </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="groupId" 
+		name="groupId" (change)="onSelectGroup($event.target.value)" required>  
+             <option value="">Please select a Group</option>         
+             <option [ngValue]="grp.groupId" *ngFor="let grp of groupObj">  
+                            {{grp.groupName}}  
+                     </option>  
+                </select> 
+
+    </div> 
+
+
+
+     <div style="background-color: rgba(52, 122, 183, 0.5215686274509804);
+    width: 407px;
+    height: 281px;
+    margin-left: 6px;
+    margin-top: 27px;">
+      <h3>Mentees Details In Group</h3>
+        <div style=" margin-left: 10px;">
+          <li *ngFor="let mnt of menteesNameGrp">
+          {{mnt}} 
+          </li> 
+        </div>
+          <h5>----------------------------------------------------------</h5>
+
+        <div style=" margin-left: 10px;">
+          <h4>Mentor :</h4>
+          <li *ngFor="let mentor of mentorArray">
+          {{mentor}} 
+          </li> 
+        </div>
+
+        <div style=" margin-left: 10px;">
+         <h4> Evaluator:</h4>
+          <li *ngFor="let evl of evaluatorArray">
+          {{evl}} 
+          </li> 
+        </div>
+
+          <h5 style="color: #0035ff;">{{mentEvalPresentStatus}}</h5>
+
+    </div>
+
+
+ <div class="form-group" style="margin-top: 13px;">
+			<label for="technology">Select Assign Role
+          <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+      </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="userRoles.role" 
+		name="groupId" (change)="selectUserType($event.target.value)" required>  
+             <option value="">Please select a Role</option>         
+            <option [ngValue]="ur" *ngFor="let ur of uRole">  
+                            {{ur}}  
+                     </option>  
+             
+                </select> 
+
+    </div> 
+
+
+<div class="form-group" style="margin-top: 13px;">
+			<label for="technology">Select User
+          <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+      </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="userId" 
+		name="groupId" (change)="onSelectUser($event.target.value)" required>  
+             <option value="">Please select a Role</option>         
+            <option [ngValue]="un.userId" *ngFor="let un of userObj">  
+                            {{un.userName}}  
+                     </option>  
+             
+                </select> 
+
+    </div> 
+
+
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 45px;
+    width: 92px;" class="btn btn-login float-right">Assign</button>
+  </div>
+  
+</form>
+  </div> 
+
+   

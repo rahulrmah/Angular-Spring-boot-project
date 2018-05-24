@@ -1,0 +1,296 @@
+
+<!---===========Add Mentees Details==============  -->
+
+<!-- <div *ngIf="uploadMenteePage"> -->
+<div   id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 154px;
+         margin-top: 55px;
+    width: 423px;
+   ">
+  
+    <h2 class="text-center">Upload Mentees List</h2>
+
+<form class="login-form"  >
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">select file</label>
+   
+    <input type="file" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="menteeList" required
+	name="menteeList">
+  </div>
+   
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 92px;" class="btn btn-login float-right">Submit</button>
+  </div>
+  
+</form>
+  </div>
+
+ <!-- </div> -->
+<!--====================upload OTT Sheet Form=============  -->
+
+<div  *ngIf="userAssignForm" id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 154px;
+         margin-top: 55px;
+    width: 423px;
+   ">
+  
+    <h2 class="text-center">Upload OTT Sheet</h2>
+
+<form class="login-form"  >
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">select file</label>
+   
+    <input type="file" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="menteeList" required
+	name="menteeList">
+  </div>
+   
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 92px;" class="btn btn-login float-right">Submit</button>
+  </div>
+  
+</form>
+  </div>
+
+  <!--====================Assign Mentor/Evaluator Form=============  -->
+ <div   id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 154px;
+         margin-top: 55px;
+    width: 423px;
+   ">
+  
+    <h2 class="text-center">Assign Mentor/Evaluator</h2>
+
+<form class="login-form"  >
+  <div class="form-group" style="margin-top: 27px;">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Technology</label>
+   
+      <div class="dropdown" style="margin-left: 159px;  margin-top: -43px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Technology
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Java</a></li>
+      <li><a href="#">DotNet</a></li>
+      <li><a href="#">FET</a></li>
+    </ul>
+  </div>
+  </div>
+   
+<div class="form-group" style="margin-top: 35px;">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Group</label>
+   
+      <div class="dropdown" style="margin-left: 159px;    margin-top: -43px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Group
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">JavaGroup1</a></li>
+      <li><a href="#">JavaGroup2</a></li>
+      <li><a href="#">JavaGroup3</a></li>
+    </ul>
+  </div>
+  </div>
+
+    <div style="background-color: rgb(243, 240, 240);
+    width: 407px;
+    height: 69px;
+    margin-left: 6px;
+    margin-top: 27px;">
+      <h3>Mentees Details In Group</h3>
+
+    </div>
+  <div style="margin-top: 35px;">
+    <label class="radio-inline">
+      <input (click)="AssignUserForm('Mentor')"  type="radio" name="optradio">Mentor
+    </label>
+    <label class="radio-inline">
+      <input  (click)="AssignUserForm('Evaluator')"  type="radio" name="optradio">Evaluator
+    </label>
+
+<div  id="meId" style="display: none" class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Mentor</label>
+   
+      <div class="dropdown" style="margin-left: 159px;     margin-top: -43px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Mentor
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Vitthal Devkar</a></li>
+      <li><a href="#">Amit</a></li>
+      <li><a href="#">Prashant</a></li>
+    </ul>
+  </div>
+  </div>
+
+<div id="evId" style="display: none" class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Evaluator</label>
+   
+      <div class="dropdown" style="margin-left: 159px;     margin-top: -43px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Evaluator
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Vitthal Devkar</a></li>
+      <li><a href="#">Amit</a></li>
+      <li><a href="#">Prashant</a></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 45px;
+    width: 92px;" class="btn btn-login float-right">Assign</button>
+  </div>
+  
+</form>
+  </div>
+
+
+  <!--================Add User Form========================  -->
+
+   <div id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 255px;
+    width: 423px;
+    ">
+  
+    <h2 class="text-center">Add User</h2>
+
+<form class="login-form"  >
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">username</label>
+   
+    <input type="text" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="menteeList" required
+	name="menteeList">
+  </div>
+   
+
+<div  id="meId"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">User Role</label>
+   
+      <div class="dropdown" style="margin-left: 159px;     margin-top: -25px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Role
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Trainer</a></li>
+      <li><a href="#">Mentor</a></li>
+      <li><a href="#">Evaluator</a></li>
+      <li><a href="#">SME</a></li>
+      <li><a href="#">Training</a></li>
+    </ul>
+  </div>
+  </div>
+
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 92px;" class="btn btn-login float-right">Submit</button>
+  </div>
+  
+</form>
+  </div>
+
+  <!--===============Create Group Form =======================  -->
+
+
+   <div id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 255px;
+    width: 423px;
+    ">
+  
+    <h2 class="text-center">Create Group</h2>
+
+<div class="form-group" style="margin-top: 27px;">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Technology</label>
+   
+      <div class="dropdown" style="margin-left: 159px;  margin-top: -27px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Technology
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Java</a></li>
+      <li><a href="#">DotNet</a></li>
+      <li><a href="#">FET</a></li>
+    </ul>
+  </div>
+  </div>
+
+
+
+<form class="login-form"  >
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">Group Name</label>
+   
+    <input type="text" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="menteeList" required
+	name="menteeList">
+  </div>
+   
+
+<div  id="meId"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Mentees List</label>
+   
+      <div class="dropdown" style="margin-left: 159px;     margin-top: -25px;" >
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Mentees
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li>Rahul<input type="checkbox" value=""></li>
+     <li>Rahul<input type="checkbox" value=""></li>
+     <li>Rahul<input type="checkbox" value=""></li>
+   <li>Rahul<input type="checkbox" value=""></li>
+    </ul>
+  </div>
+  </div>
+
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 109px;" class="btn btn-login float-right">Create Group</button>
+  </div>
+  
+</form>
+  </div> 

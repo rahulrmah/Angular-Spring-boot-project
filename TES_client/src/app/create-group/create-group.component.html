@@ -1,0 +1,187 @@
+
+
+<div id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+         margin-left: 255px;
+    width: 423px;
+    ">
+  
+    <h2 class="text-center">Create Group</h2>
+
+<div class="form-group" style="margin-top: 27px;">
+      <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Technology
+          <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+      </label>
+      <div style="margin-left: 159px;  margin-top: -27px;">
+        <select id="tech" #Id="ngModel" class="form-group" [(ngModel)]="technology" 
+        name="technology" (change)="onSelectTech($event.target.value)" required>  
+              <option value="">Please select a Technology</option>         
+              <option value="Java">Java</option>
+              <option value="DotNet">Dot Net</option>
+              <option value="FET">FET</option> 
+        </select> 
+    </div>
+  </div>
+
+
+<form class="login-form" (ngSubmit)="createGroup()">
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">Group Name
+        <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+    </label>
+   
+    <input type="text" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="groupName" required
+	name="groupName" [(ngModel)]="groupName">
+  </div>
+   
+<div [hidden]="!javaMenteeOptions">
+<div  id="mentee1"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">First Mentee 
+      <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>  
+    </label>
+    <div style="margin-left: 159px;margin-top: -25px;">
+      <select id="m1" #Id="ngModel" class="form-group" [(ngModel)]="mentee1" 
+	  	 name="mentee1" required>  
+        <option value="">Select</option>         
+        <option [ngValue]="mentee.menteeId" *ngFor="let mentee of javaMentees">{{mentee.menteeName}}</option>  
+      </select> 
+    </div>
+</div>
+<div  id="mentee2"  class="form-group">
+  <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Second Mentee </label>
+  <div style="margin-left: 159px;margin-top: -25px;">
+    <select id="m2" #Id="ngModel" class="form-group" [(ngModel)]="mentee2" 
+     name="mentee2">  
+      <option value="">Select</option>         
+      <option [ngValue]="mentee.menteeId" *ngFor="let mentee of javaMentees">{{mentee.menteeName}}</option>  
+    </select> 
+  </div>
+</div>
+<div  id="mentee3"  class="form-group">
+  <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Third Mentee </label>
+  <div style="margin-left: 159px;margin-top: -25px;">
+    <select id="m3" #Id="ngModel" class="form-group" [(ngModel)]="mentee3" 
+     name="mentee3">  
+      <option value="">Select</option>         
+      <option [ngValue]="mentee.menteeId" *ngFor="let mentee of javaMentees">{{mentee.menteeName}}</option>  
+    </select> 
+  </div>
+</div>
+<div  id="mentee4"  class="form-group">
+  <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Fourth Mentee </label>
+  <div style="margin-left: 159px;margin-top: -25px;">
+    <select id="m4" #Id="ngModel" class="form-group" [(ngModel)]="mentee4" 
+     name="mentee4">  
+      <option value="">Select</option>         
+      <option [ngValue]="mentee.menteeId" *ngFor="let mentee of javaMentees">{{mentee.menteeName}}</option>  
+    </select> 
+  </div>
+</div>
+</div>
+
+<div [hidden]="!dotNetMenteeOptions">
+  <div  id="mentee1"  class="form-group">
+      <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">First Mentee 
+         <i class="fa fa-asterisk" style="font-size:8px;color:red"></i> 
+      </label>
+      <div style="margin-left: 159px;margin-top: -25px;">
+        <select id="m1" #Id="ngModel" class="form-group" [(ngModel)]="mentee1" 
+         name="mentee1" required>  
+          <option value="">Select</option>         
+          <option [ngValue]="mentee.menteeId" *ngFor="let mentee of dotNetMentees">{{mentee.menteeName}}</option>  
+        </select> 
+      </div>
+  </div>
+  <div  id="mentee2"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Second Mentee </label>
+    <div style="margin-left: 159px;margin-top: -25px;">
+      <select id="m2" #Id="ngModel" class="form-group" [(ngModel)]="mentee2" 
+       name="mentee2">  
+        <option value="">Select</option>         
+        <option [ngValue]="mentee.menteeId" *ngFor="let mentee of dotNetMentees">{{mentee.menteeName}}</option>  
+      </select> 
+    </div>
+  </div>
+  <div  id="mentee3"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Third Mentee </label>
+    <div style="margin-left: 159px;margin-top: -25px;">
+      <select id="m3" #Id="ngModel" class="form-group" [(ngModel)]="mentee3" 
+       name="mentee3">  
+        <option value="">Select</option>         
+        <option [ngValue]="mentee.menteeId" *ngFor="let mentee of dotNetMentees">{{mentee.menteeName}}</option>  
+      </select> 
+    </div>
+  </div>
+  <div  id="mentee4"  class="form-group">
+    <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Fourth Mentee </label>
+    <div style="margin-left: 159px;margin-top: -25px;">
+      <select id="m4" #Id="ngModel" class="form-group" [(ngModel)]="mentee4" 
+       name="mentee4">  
+        <option value="">Select</option>         
+        <option [ngValue]="mentee.menteeId" *ngFor="let mentee of dotNetMentees">{{mentee.menteeName}}</option>  
+      </select> 
+    </div>
+  </div>
+  </div>
+
+  <div [hidden]="!fetMenteeOptions">
+    <div  id="mentee1"  class="form-group">
+        <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">First Mentee 
+           <i class="fa fa-asterisk" style="font-size:8px;color:red"></i> 
+        </label>
+        <div style="margin-left: 159px;margin-top: -25px;">
+          <select id="m1" #Id="ngModel" class="form-group" [(ngModel)]="mentee1" 
+           name="mentee1" required>  
+            <option value="">Select</option>         
+            <option [ngValue]="mentee.menteeId" *ngFor="let mentee of fetMentees">{{mentee.menteeName}}</option>  
+          </select> 
+        </div>
+    </div>
+    <div  id="mentee2"  class="form-group">
+      <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Second Mentee </label>
+      <div style="margin-left: 159px;margin-top: -25px;">
+        <select id="m2" #Id="ngModel" class="form-group" [(ngModel)]="mentee2" 
+         name="mentee2">  
+          <option value="">Select</option>         
+          <option [ngValue]="mentee.menteeId" *ngFor="let mentee of fetMentees">{{mentee.menteeName}}</option>  
+        </select> 
+      </div>
+    </div>
+    <div  id="mentee3"  class="form-group">
+      <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Third Mentee </label>
+      <div style="margin-left: 159px;margin-top: -25px;">
+        <select id="m3" #Id="ngModel" class="form-group" [(ngModel)]="mentee3" 
+         name="mentee3">  
+          <option value="">Select</option>         
+          <option [ngValue]="mentee.menteeId" *ngFor="let mentee of fetMentees">{{mentee.menteeName}}</option>  
+        </select> 
+      </div>
+    </div>
+    <div  id="mentee4"  class="form-group">
+      <label style="float: left" class="text-uppercase" style=" margin-left: 35px;">Fourth Mentee </label>
+      <div style="margin-left: 159px;margin-top: -25px;">
+        <select id="m4" #Id="ngModel" class="form-group" [(ngModel)]="mentee4" 
+         name="mentee4">  
+          <option value="">Select</option>         
+          <option [ngValue]="mentee.menteeId" *ngFor="let mentee of fetMentees">{{mentee.menteeName}}</option>  
+        </select> 
+      </div>
+    </div>
+    </div>
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 109px;" class="btn btn-login float-right">Create Group</button>
+  </div>
+  
+</form>
+  </div> 

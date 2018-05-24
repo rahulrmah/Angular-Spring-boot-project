@@ -1,0 +1,75 @@
+<h4>{{addUserStatus}} </h4>
+<div id="mlistID" class="col-md-4 login-sec" style=" border-radius: 5px;
+    background-color: rgba(21, 121, 121, 0.22);
+    display: block;
+    padding-left: 0px;
+    margin-left: 146px;
+    margin-top: 46px;
+    width: 423px;
+    ">
+  
+    <h2 class="text-center">Add User</h2>
+
+<form class="login-form" (ngSubmit)="addUser()" >
+
+  <div class="form-group">
+    <label  class="text-uppercase" style=" margin-left: 35px;">username 
+
+      <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+    </label>
+   
+    <input type="text" style="width: 322px;
+    margin-left: 35px;"
+				class="form-control" id="userName" required
+	[(ngModel)]="user.userName"   [ngModelOptions]="{standalone: true}" name="userName">
+  </div>
+
+
+
+    <div class="form-group">
+			<label for="technology">TECHNOLOGY 
+       <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>  
+      </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="user.technology" 
+		name="technology" (change)="onSelectTech($event.target.value)">  
+             <option value="">Please select a Technology</option>         
+             <option [ngValue]="tech2" *ngFor="let tech2 of tech">  
+                            {{tech2}}  
+                     </option>  
+                </select> 
+
+    </div>
+              
+
+    <div class="form-group">
+			<label for="technology">USER ROLE
+         <i class="fa fa-asterisk" style="font-size:8px;color:red"></i>
+        </label>
+			
+	  <select id="Id" #Id="ngModel" class="form-group" [(ngModel)]="user.userRoles" 
+		name="userRoles" (change)="onSelectRole($event.target.value)">  
+             <option value="">Please select a Role</option>         
+             <option [ngValue]="uRole2" *ngFor="let uRole2 of uRole">  
+                            {{uRole2}}  
+                     </option>  
+                </select> 
+
+		</div>
+
+
+
+    <div class="form-check">
+    <label class="form-check-label">
+      
+    </label>
+    <button class="btn btn-default" data-toggle="confirmation"
+    data-popout="true" 
+    type="submit" style=" margin-left: 160px;
+    background-color: #5bb6bf;
+    margin-bottom: 10px;
+    width: 92px;" class="btn btn-success float-right">Submit</button>
+  </div>
+  
+</form>
+  </div>
